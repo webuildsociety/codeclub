@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <title>Basic CSS - CodeClub</title>
+    <link rel='stylesheet' type='text/css' href='/styles.css' />
+    <link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+  </head>
+  <body>
+    <h1>CSS</h1>
+    <div id='menu'>
+      <a href='/index.html'>Home</a>
+      <a href='/html.html'>HTML</a>
+      <a href='/css.html' class='selected'>CSS</a>
+    </div>
+
+    <h2>What is CSS?</h2>
+    <p>
+      CSS (Cascading StyleSheets) makes web pages look nice - the fonts, the colours the way the page is laid out (e.g. a nav bar or side menu).
+    </p>
+    <p>It didn't exist on the early web, and HTML still has a bunch of tags like <span class='code'>&lt;font&gt;</span> for controlling look and feel, but these are frowned upon by the developer community.</p>
+
+    <h2>Make your index page look nicer</h2>
+    <p>Add a <span class='code'>&lt;style&gt;</span> tag to the head section of your page:</p>
+    <p class='filename'>
+      index.html
+    </p>
+    <pre class='language-markup'><code><!--
+      <html>
+        <head>
+          <title>My first web-page</title>
+          <style> ... CSS in here! ... </style>
+        </head>
+        <body>
+          <p>Hello World! This has some <b>bold text</b> and some <i>italic</i> text.</p>
+        </body>
+      </html>
+    --></code></pre>
+
+    <p>First, change the font for everything inside the body tag:</p>
+    <pre class='language-markup'><code><!--
+<style>
+  body { font-family: Helvetica; }
+</style>
+    --></code></pre>
+    <p>Now change the background colour of just your p tags:</p>
+    <pre class='language-markup'><code><!--
+<style>
+  body { font-family: Helvetica; }
+  p { background-color: blue; }
+</style>
+    --></code></pre>
+    <p>Note: the American spelling of "color"</p>
+    <p>Note: CSS colours are usually in <a href='#'>HEX</a> format e.g. <span class='code'>color: #ff0000;</span> for red</p>
+
+<h2>Classes</h2>
+
+<h2>ids</h2>
+
+<h2>Using a shared CSS file</h2>
+
+    <h2>More learning</h2>
+    <div class='links'>
+      <ul>
+        <li><a href='https://www.w3schools.com/css/css_intro.asp'>CSS intro with w3 schools</a></li>
+      </ul>
+    </div>
+
+  </body>
+</html>

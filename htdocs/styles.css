@@ -1,0 +1,83 @@
+* {
+  font-family: Helvetica, Arial;
+}
+
+p, p.filename {
+  margin-left: 20px;
+}
+
+.filename {
+  font-family: Courier;
+  background-color: lightBlue;
+  margin: 10px 10px -10px 10px;
+  padding: 5px;
+  font-size: 0.8em;
+}
+
+.code {
+  font-family: Courier;
+}
+
+/* Menu tabs */
+/* Most of this crazy CSS is to make the little arrows happen */
+/* These are triangles made out of pure CSS using a trick with borders */
+/* For more info, follow this tutorial https://css-tricks.com/triangle-breadcrumbs/ */
+#menu {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* float each tab left */
+#menu a {
+  float: left;
+  position: relative;
+  padding: 8px 0px 8px 48px;
+  text-align: left;
+}
+
+/* Change background color of each tab on hover */
+#menu a:hover { background-color: #ddd; }
+#menu a:hover:after { border-left-color: #ddd; }
+
+/* Create an selected tab class so the HTML can choose which one is highlighted */
+#menu a.selected { background-color: #fff; }
+#menu a.selected:after { border-left-color: #fff; }
+
+/* arrow head */
+#menu a::after { 
+  content: " "; 
+  display: block; 
+  width: 0; 
+  height: 0;
+  border-top: 50px solid transparent; /* Go big on the size, and let overflow hide */
+  border-bottom: 50px solid transparent;
+  border-left: 32px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px; 
+  left: 100%;
+  z-index: 2; 
+}
+
+/* ickle "white" arrow head slightly mis-aligned to make what looks like a border */
+#menu a::before { 
+  content: " "; 
+  display: block; 
+  width: 0; 
+  height: 0;
+  border-top: 50px solid transparent;       
+  border-bottom: 50px solid transparent;
+  border-left: 32px solid white;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px; 
+  margin-left: 2px;
+  left: 100%;
+  z-index: 1; 
+}
+
+/* the first tab needs less left padding as it doesn't have an arrow up it's butt */
+#menu a:first-child {
+  padding-left:22px;
+}
