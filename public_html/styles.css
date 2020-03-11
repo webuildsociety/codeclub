@@ -18,6 +18,10 @@ p, p.filename {
   font-family: Courier;
 }
 
+pre {
+  border: 1px solid lightBlue;
+}
+
 /* Menu tabs */
 /* Most of this crazy CSS is to make the little arrows happen */
 /* These are triangles made out of pure CSS using a trick with borders */
