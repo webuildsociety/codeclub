@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Variable Names - CodeClub</title>
+    <link rel='stylesheet' type='text/css' href='/styles.css' />
+    <link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+  </head>
+  <body>
+    <h1>Variable Names in Computing</h1>
+    <div id='menu'>
+      <a href='/'>Home</a>
+      <a href='/variableNames.html' class='selected'>Variable Names</a>
+    </div>
+
+    <h2>Who cares?</h2>
+    <p>
+      As with all computer science names, <i>your future self</i> will be grateful if you name your variables with informatively, and without spaces and crazy characters.
+    </p>
+    <p>Numbers, letters, FINE - everything else... at your risk!</p>
+
+    <h2>Good practice for Variable Names</h2>
+    <h3>No crazy characters</h3>
+    <p>Spaces are a no-no, and most languages do not even allow spaces as they are used to separate one bit of code from another. It'll just error</p>
+    <p>Similarly, arithmetic operators are deeply unhelpful as most languages will think your hospital appropriate variable <span class='code'>"a+e"</span> is actually you asking for "a" to be added to "e". This is why using minus signs (e.g. <span class='code'>nice-variable-name</span> is ill advised)</p>
+    <p>In fact, most punctuation is used in weird ways by coding languages, or worse - part of an escape sequence - so DON'T BOTHER. Letters, numbers = Yay</p>
+    <h3>Camel Case</h3>
+    <p>Some folk separate multi-word variable names with _ e.g. <span class='code'>num_camels_ridden</span></p>
+    <p>However, it's less characters, avoids the non-alpha-numeric underscore character, (and is generally less 90s) to simply capitalise each separate word e.g. <span class='code'>numCamelsRidden</span></p>
+    <p>Note, the first letter however is always lowercase (thus it looking a bit like a camel) because initially upper case variable names are saved for OO Classes and other "important" things.</p>
+    <h3>A good name</h3>
+    <p><b>Descriptive</b> yet as <b>concise</b> as possible. Too long, and you'll hate coding it. Too short and you'll hate debugging it.</p>
+    <p><span class='code'>theNumberOfPeopleWhoWorkHere</span> is descriptive but probably unnecessary, especially if you know you are inside a module about working people.</p>
+    <p><span class='code'>numPeople</span> is better. It makes sense within context - you know what it's storing and you won't hate yourself.</span></p>
+
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>HEX - CodeClub</title>
+    <link rel='stylesheet' type='text/css' href='/styles.css' />
+    <link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+  </head>
+  <body>
+    <h1>HEX</h1>
+    <div id='menu'>
+      <a href='/'>Home</a>
+      <a href='/hex.html' class='selected'>HEX</a>
+    </div>
+
+    <h2>What is HEX?</h2>
+    <p>
+      HEXADECIMAL (or HEX for short) is a way of representing a number from 0 to 15 using the letters A to F for the numbers 10 to 15.
+    </p>
+    <table>
+      <tr><th>Normal Decimal:</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th></tr>
+      <tr><td>HEX equivalent:</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td></tr>
+    </table>
+
+    <h2>Why is this useful?</h2>
+    <p>It saves space. Computers love numbers that are multiples of "2" (because <a href='/binary.html'>binary</a>) and counting up to 10 takes up the same amount of space as counting up to 16 so you may as well.</p>
+    <p>But when you display it on screen or print it out it takes less space to write "F" than it does "15" and "FF" than "255".
+
+
+    <h2>Colours and stuff</h2>
+    <p>This depends on how bloody marvellous your screen is, but MOST screens can cope with a mix of 256 shades of red, 256 green and 256 blue (which astonishingly is more than 16,000,000 colours)</p>
+    <p>This is most easily represented as a HEX value with 2 characters for red, 2 for blue, 2 for green.</p>
+    <p>Also note we put a hash in front of HEX values, e.g. #ff = 255</p>
+    <table>
+      <tr><td style='border: 1px solid #ddd; width:16px'>&nbsp;</td><td class='code'>#ff0000</td><td> is as white as you can get</td></tr>
+      <tr><td style='background-color:#ff0000; width:16px'>&nbsp;</td><td class='code'>#ff0000</td><td> is as red as you can get</td></tr>
+      <tr><td style='background-color:#00ff00; width:16px'>&nbsp;</td><td class='code'>#00ff00</td><td> is as green as you can get</td></tr>
+      <tr><td style='background-color:#0000ff; width:16px'>&nbsp;</td><td class='code'>#0000ff</td><td> is as blue as you can get</td></tr>
+      <tr><td style='background-color:#000000; width:16px'>&nbsp;</td><td class='code'>#000000</td><td> is blacker than the night</td></tr>
+    </table>
+
+  </body>
+</html>

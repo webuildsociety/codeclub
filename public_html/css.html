@@ -8,7 +8,7 @@
   <body>
     <h1>CSS</h1>
     <div id='menu'>
-      <a href='/index.html'>Home</a>
+      <a href='/'>Home</a>
       <a href='/html.html'>HTML</a>
       <a href='/css.html' class='selected'>CSS</a>
     </div>
@@ -50,13 +50,76 @@
 </style>
     --></code></pre>
     <p>Note: the American spelling of "color"</p>
-    <p>Note: CSS colours are usually in <a href='#'>HEX</a> format e.g. <span class='code'>color: #ff0000;</span> for red</p>
+    <p>Note: CSS colours are usually in <a href='/hex.html'>HEX</a> format e.g. <span class='code'>color: #ff0000;</span> for red</p>
 
 <h2>Classes</h2>
+<p>Sometimes you want to target specific items... for example if you want some paragraphs to be red - but not all of them.</p>
+<p>A class in CSS is simply a <a href='variableNames.html'>variable name</a> you choose yourself and slap on an HTML tag (pretty much any HTML tag) with a <span class='code'>class='blah'</span> e.g.:</p>
+<pre class='language-markup'><code><!--
+  <p class='warning'>This text needs to be RED and in your face</p>
+--></code></pre>
+<p>You then refer to that class in your CSS using a full stop "." (which btw is a TERRIBLE design choice by the CSS team as "." was already being used to mean a crap-ton of other stuff in comp sci (like for decimals - heard of them guys??))</p>
+<pre class='language-css'><code><!--
+  .warning {
+    background-color: red;
+  }
+--></code></pre>
 
 <h2>ids</h2>
+<p>If you have one tag you want to target (and the only one on a page) you can use an id.</p>
+<p>These use <span class='code'>id='blah'</span> in the code, and <span class='code'>#blah</span> in the CSS e.g.</p>
+<pre class='language-markup'><code><!--
+<style>
+#header {
+  background-color: grey;
+}
+</style>
+
+<p id='header'>This only appears once</p>
+
+--></code></pre>
+
 
 <h2>Using a shared CSS file</h2>
+<p>Now, instead of having a <span class='code'>&lt;style&gt;</span> tag in the head of your page, save your CSS to it's own .css file:</p>
+<p class='filename'>
+  styles.css
+</p>
+<pre class='language-css'><code><!--
+  body {
+    font-family: Helvetica;
+  }
+  p {
+    background-color: blue;
+  }
+
+  .warning {
+    background-color: red;
+  }
+
+  #header {
+    background-color: grey;
+  }
+
+--></code></pre>
+
+<p>... and pick that up in the head section of ALL of the pages on your website, so they all look the same:</p>
+<p class='filename'>
+  index.html, squirrels.html, blah.html, ...
+</p>
+<pre class='language-markup'><code><!--
+<html>
+  <head>
+    <title>...</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    ...
+  </body>
+</html>
+
+
+--></code></pre>
 
     <h2>More learning</h2>
     <div class='links'>

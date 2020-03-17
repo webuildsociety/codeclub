@@ -1,0 +1,146 @@
+<html>
+  <head>
+    <title>Binary - CodeClub</title>
+    <link rel='stylesheet' type='text/css' href='/styles.css' />
+    <link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+  </head>
+  <body>
+    <h1>There's Something About Binary</h1>
+    <div id='menu'>
+      <a href='/'>Home</a>
+      <a href='/binary.html' class='selected'>Binary</a>
+    </div>
+
+    <h2>How does binary work?</h2>
+      <p>Computers are essentially built out of on/off switches (electricity in a wire is either "On" = 1 or "Off" = 0).
+        Each of these binary switches is known as a "bit" and if you stick them together you can represent bigger numbers.
+      </p>
+      <p>
+        e.g. with 2 switches you can count 4 things (if you consider 0 to be a number):
+        <table>
+          <tr>
+            <th>Bit 2</th>
+            <th>Bit 1</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>0</td>
+            <td>=</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>1</td>
+            <td>=</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>=</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>=</td>
+            <td>3</td>
+          </tr>
+        </table>
+      </p>
+
+<p>
+  Add another switch and you can count up to 8 things (7 + "0")
+  <table>
+    <tr>
+      <th>Bit 3</th>
+      <th>Bit 2</th>
+      <th>Bit 1</th>
+      <th>&nbsp;</th>
+      <th>&nbsp;</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>=</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>=</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>=</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>=</td>
+      <td>7</td>
+    </tr>
+  </table>
+  </p>
+  <p>etc, etc.</p>
+
+  <h2>Bytes</h2>
+  <p>Computers generally cluster bits together into "bytes" - an 8bit computer has bytes representing numbers up to 256, but a 16bit machine can handle numbers up to 65,536 and so on.</p>
+  <p>If you have an 8 bit computer "just" counting up to 200 would be a waste of space, so that's why most figures you read around computer science utilise all the switches, i.e. are multiples of 2: "256" or "512" or "1024" etc</p>
+  <h3>Hex</h3>
+  <p>Writing binary out long-hand is crap, so <a href='/hex.html'>hexadecimal</a> was created as a shorthand.</p>
+
+  <h2>Binary Table</h2>
+  <p>No idea why I bothered but here are the first 256 binary numbers (8 bit):</p>
+  <table id='binaryTable'>
+  </table>
+  <script>
+    function toBinary(d) {
+      var binaryNum = [];
+      var i=0; 
+      while (d > 0) { 
+        // storing remainder in binary array 
+        binaryNum[i] = parseInt(d%2); 
+        d = parseInt(d/2); 
+        i++; 
+      }
+      var b = "";
+      // printing binary array in reverse order 
+      for (j = i - 1; j >= 0; j--) {
+        b+="<br />"+binaryNum[j];
+      }
+      return b;
+    }
+
+    var t="<tr>";
+      for (n=0; n<256; n++) {
+      t += "<th>"+n+"</th>";
+    }
+    t += "</tr><tr>";
+      for (n=0; n<256; n++) {
+      t += "<td>"+toBinary(n)+"</td>";
+    }
+    t += "</tr>";
+
+    /*
+    var t = "";
+    for (n=0; n<256; n++) {
+      var b = toBinary(n);
+      t += "<tr><td>"+b+"</td><td>=</td><td>"+n+"</td></tr>";
+    }
+    */
+
+    document.getElementById('binaryTable').innerHTML = t;
+  </script>
+</body>
+</html>
